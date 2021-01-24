@@ -16,9 +16,8 @@ const HeroSection = () => {
                 />
             </HeroBg>
             <HeroContent>
-                <HeroH1>Hi! I'm Zoe and i'm a software engineer</HeroH1>
-                <HeroP>I like bringing idea's to life and working on projects that
-                have a positive impact.
+                <HeroH1>Zoe Schmitt</HeroH1>
+                <HeroP>Software Engineer, Interface Designer
                 </HeroP>
                 <HeroBtnWrapper>
                     <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover
