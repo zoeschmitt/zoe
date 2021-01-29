@@ -4,15 +4,15 @@ export const secOne = {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'About Me',
-    headline: 'Something About Me',
-    description: 'Project I built with react using styled componenet blah blah',
+    topLine: "Hi, I'm Zoe",
+    headline: "I like building things that make a difference",
+    description: "When i'm not programming, I enjoy spending time outdoors and with family and friends. I'm also a soon to be grad (May 2021) and working on getting my private pilot's license!",
     buttonLabel: 'See more',
     imgStart: false,
-    img: '/images/rocket.svg',
+    img: '/images/me.svg', 
     alt: 'Space',
     dark: true,
-    primary: true,
+    primary: true, 
     darkText: false ,
     linkButton: true,
 }
@@ -24,7 +24,7 @@ export const secTwo = {
     lightTextDesc: true,
     topLine: 'flutter / firebase',
     headline: 'TrailerHub',
-    description: 'Project I built with react using styled componenet blah blah',
+    description: "Co-founder, developer, and designer of TrailerHub, a soon-to-be released mobile app that allows people to find and rent trailers near them. Built with Flutter and Firebase, we integrated the Google Maps API, Stripe API, Dwolla API and used Firebase cloud functions in order to bring TrailerHub to life.",
     buttonLabel: 'See more',
     imgStart: true,
     img: '/images/trailerhub.png',
@@ -56,9 +56,9 @@ export const secFour = {
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Flutter / firebase',
-    headline: 'CBD Store Inventory',
-    description: 'A cross platform app that keeps track of item locations',
+    topLine: 'Flutter',
+    headline: 'Inventory App',
+    description: "Worked as head developer and designer to create a mobile inventory application for one of the largest CBD companies in San Antonio. The app supports searching and filtering as well as editing items and the amount of inventory at all locations.",
     buttonLabel: 'See more',
     imgStart: true,
     img: '/images/inventory2.png',
@@ -92,19 +92,12 @@ export const secSix = {
     lightTextDesc: false,
     topLine: 'React',
     headline: 'Personal Website',
-    description: 'Project I built with react using styled componenet blah blah',
+    description: 'Responsive website I built using react js to showcase all my work!',
     buttonLabel: 'See more',
     imgStart: true,
-    img: '/images/inventory2.png',
+    img: '/images/mywebsite.png',
     alt: 'Space',
     dark: false,
     primary: true,
     darkText: true
 }
-/*
-Cross platform mobile application that keeps track of item
-inventory at all store locations, allows editing of 
-
-Firebase integrated for authentication and REST APIs for 
-REST APIs used for 
-*/
