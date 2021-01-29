@@ -3,8 +3,8 @@ import { ProjectsContainer, ProjectsH1, ProjectsWrapper, ProjectsCard, ProjectsI
 
 const Projects = () => {
     return (
-        <ProjectsContainer id="work">
-            <ProjectsH1>Projects</ProjectsH1>
+        <ProjectsContainer id="mywork">
+            <ProjectsH1>My Work</ProjectsH1>
             <ProjectsWrapper> 
                 <ProjectsCard>
                     <ProjectsIcon src="/images/rocket.svg" alt="space"/>

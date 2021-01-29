@@ -1,5 +1,6 @@
+
 export const secOne = {
-    id: 'about',
+    id: 'aboutme',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
@@ -12,37 +13,38 @@ export const secOne = {
     alt: 'Space',
     dark: true,
     primary: true,
-    darkText: false
+    darkText: false ,
+    linkButton: true,
 }
 
 export const secTwo = {
-    id: 'bla',
+    id: 'trailerhub',
     lightBg: true,
     lightText: false,
-    lightTextDesc: false,
-    topLine: 'Work',
-    headline: 'Work I have done',
+    lightTextDesc: true,
+    topLine: 'flutter / firebase',
+    headline: 'TrailerHub',
     description: 'Project I built with react using styled componenet blah blah',
     buttonLabel: 'See more',
     imgStart: true,
-    img: '/images/space2.svg',
+    img: '/images/trailerhub.png',
     alt: 'Space',
     dark: false,
     primary: true,
-    darkText: false
+    darkText: true
 }
 
 export const secThree = {
-    id: 'resume',
+    id: 'store',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Work',
-    headline: 'Work I have done',
+    topLine: "React / Express / MongoDB",
+    headline: 'Aircraft Store',
     description: 'Project I built with react using styled componenet blah blah',
     buttonLabel: 'See more',
     imgStart: false,
-    img: '/images/space1.svg',
+    img: '/images/inventory2.png',
     alt: 'Space',
     dark: true,
     primary: true,
@@ -50,18 +52,59 @@ export const secThree = {
 }
 
 export const secFour = {
-    id: 'contactme',
+    id: 'inventory',
     lightBg: true,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Work',
-    headline: 'Work I have done',
-    description: 'Project I built with react using styled componenet blah blah',
+    topLine: 'Flutter / firebase',
+    headline: 'CBD Store Inventory',
+    description: 'A cross platform app that keeps track of item locations',
     buttonLabel: 'See more',
     imgStart: true,
-    img: '/images/nature.svg',
+    img: '/images/inventory2.png',
     alt: 'Space',
     dark: false,
     primary: true,
+    darkText: true
+}
+
+export const secFive = {
+    id: 'contractor',
+    lightBg: false,
+    lightText: true,
+    lightTextDesc: true,
+    topLine: "Swift",
+    headline: 'Contractor App',
+    description: 'Project I built with react using styled componenet blah blah',
+    buttonLabel: 'See more',
+    imgStart: false,
+    img: '/images/inventory2.png',
+    alt: 'Space',
+    dark: true,
+    primary: true,
     darkText: false
 }
+
+export const secSix = {
+    id: 'portfolio',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'React',
+    headline: 'Personal Website',
+    description: 'Project I built with react using styled componenet blah blah',
+    buttonLabel: 'See more',
+    imgStart: true,
+    img: '/images/inventory2.png',
+    alt: 'Space',
+    dark: false,
+    primary: true,
+    darkText: true
+}
+/*
+Cross platform mobile application that keeps track of item
+inventory at all store locations, allows editing of 
+
+Firebase integrated for authentication and REST APIs for 
+REST APIs used for 
+*/

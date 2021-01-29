@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
-export const ProjectsContainer = styled.div`
+export const CardsContainer = styled.div`
     height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #fafafa;
+    background: #1b1b1b;
 
     @media screen and (max-width: 768px) {
         height: 1100px;
@@ -17,7 +17,7 @@ export const ProjectsContainer = styled.div`
     }
 `;
 
-export const ProjectsWrapper = styled.div`
+export const CardsWrapper = styled.div`
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
@@ -36,7 +36,7 @@ export const ProjectsWrapper = styled.div`
     }
 `;
 
-export const ProjectsCard = styled.div`
+export const CardsCard = styled.div`
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -54,13 +54,13 @@ export const ProjectsCard = styled.div`
     }
 `;
 
-export const ProjectsIcon = styled.img`
+export const CardsIcon = styled.img`
     height: 160px;
     width: 160px;
     margin-bottom: 10px;
 `;
 
-export const ProjectsH1 = styled.h1`
+export const CardsH1 = styled.h1`
     font-size: 2.5rem;
     color: #fff;
     margin-bottom: 64px;
@@ -70,12 +70,12 @@ export const ProjectsH1 = styled.h1`
     }
 `;
 
-export const ProjectsH2 = styled.h2`
+export const CardsH2 = styled.h2`
     font-size: 1rem;
     margin-bottom: 10px;
 `;
 
-export const ProjectsP = styled.p`
+export const CardsP = styled.p`
     font-size: 1rem;
     text-align: center;
 `;

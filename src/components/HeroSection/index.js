@@ -9,7 +9,7 @@ const HeroSection = () => {
         setHover(!hover);
     };
     return (
-        <HeroContainer>
+        <HeroContainer id="home">
             <HeroBg>
                 <Particles
                     params={particlesOptions}
@@ -17,12 +17,12 @@ const HeroSection = () => {
             </HeroBg>
             <HeroContent>
                 <HeroH1>Zoe Schmitt</HeroH1>
-                <HeroP>Software Engineer, Interface Designer
+                <HeroP>Software Engineer
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover
+                    <Button to='aboutme' smooth={true} duration={500} spy={true} exact='true'  onMouseEnter={onHover} onMouseLeave={onHover
                     } primary="true" dark="true"
-                    >My Work {hover ? <ArrowForward /> : <ArrowRight />}</Button>
+                    >About Me {hover ? <ArrowForward style={{transform: `rotate(90deg)`}}/> : <ArrowRight style={{transform: `rotate(90deg)`}}/>}</Button>
                 </HeroBtnWrapper>
             </HeroContent>
         </HeroContainer>
@@ -104,7 +104,7 @@ const particlesOptions =
             "density": {
                 "enable": true
             },
-            "value": 55
+            "value": 60
         },
         "opacity": {
             "value": 0.5,

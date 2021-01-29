@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
 
 export const InfoContainer = styled.div`
     color: #000;
@@ -17,7 +18,6 @@ export const InfoWrapper = styled.div`
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0 24px;
     justify-content: center;
 `;
 
@@ -33,14 +33,15 @@ export const InfoRow = styled.div`
 `;
 
 export const Column1 = styled.div`
-    margin-bottom: 15px;
-    padding: 0 15px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: ${({imgStart}) => (imgStart ? 'flex-end' : 'flex-start')};
     grid-area: col1;
 `;
 
 export const Column2 = styled.div`
-    margin-bottom: 15px;
-    padding: 0 15px;
+    /* background-color: blue; */
+    /* padding: 0 0 0 15px; */
     grid-area: col2;
 `;
 
@@ -88,10 +89,26 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
+    padding: 0 0 0 35px;
+    padding: ${({imgStart}) => (imgStart ? '0 35px 0 0' : '0 0 0 35px')};
 `;
 
 export const Img = styled.img`
     width: 100%;
-    margin: 0 0 10px 0;
     padding-right: 0;
+`;
+
+export const BigBtnWrapper = styled.div`
+    margin-top: 32px;
+    display: flex;
+`;
+
+export const ArrowForward = styled(MdArrowForward)`
+    margin-left: 8px;
+    font-size: 20px;
+`;
+
+export const ArrowRight = styled(MdKeyboardArrowRight)`
+    margin-left: 8px;
+    font-size: 20px;
 `;

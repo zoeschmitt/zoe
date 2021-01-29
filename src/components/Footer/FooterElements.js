@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkS } from 'react-scroll'
 
 export const FooterContainer = styled.footer`
     background-color: #1b1b1b;
@@ -8,60 +8,41 @@ export const FooterContainer = styled.footer`
 export const FooterWrap = styled.div`
     padding: 48px 24px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
 `;
 
-export const FooterLinksContainer = styled.div`
+export const ContactInfoWrap = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+`
 
-    @media screen and (max-width: 820px) {
-        padding-top: 32px;
-    }
-`;
-
-export const FooterLinksWrapper = styled.div`
-    display: flex;
-    
-    @media screen and (max-width: 820px) {
-        flex-direction: column;
-    }
-`;
-
-export const FooterLinkItems = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 16px;
-    text-align: left;
-    width: 160px;
-    box-sizing: border-box;
-    color: #fff;
-
-    @media screen and (max-width: 420px) {
-        margin: 0;
-        padding: 10px;
-        width: 100%;
-    }
-`;
-
-export const FooterLinkTitle = styled.h1`
-    font-size: 14px;
-    margin-bottom: 16px;
-`;
-
-export const FooterLink = styled(LinkR)`
+export const ContactLink = styled(LinkS)`
     color: #fff;
     text-decoration: none;
     margin-bottom: 0.5rem;
     font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
 
     &:hover {
         color: #48adf5;
         transition: 0.3s ease-out;
     }
+`;
+
+export const NavLogo = styled(LinkS)`
+    color: #fff;
+    justify-self: flex-start;
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    font-weight: bold;
+    text-decoration: none;
 `;

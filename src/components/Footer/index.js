@@ -1,44 +1,20 @@
 import React from 'react'
-import { FooterContainer, FooterLink, FooterLinkItems, FooterLinksContainer, FooterLinksWrapper, FooterLinkTitle, FooterWrap } from './FooterElements'
+import { FooterContainer, NavLogo, ContactLink, ContactInfoWrap, FooterWrap } from './FooterElements'
+import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
     return (
         <FooterContainer>
             <FooterWrap>
-                <FooterLinksContainer>
-                    <FooterLinksWrapper>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>Footer Title</FooterLinkTitle>
-                            <FooterLink to="/about">About Me</FooterLink>
-                            <FooterLink to="/work">About Me</FooterLink>
-                            <FooterLink to="/resume">About Me</FooterLink>
-                            <FooterLink to="/contactme">About Me</FooterLink>
-                        </FooterLinkItems>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>Footer Title</FooterLinkTitle>
-                            <FooterLink to="/about">About Me</FooterLink>
-                            <FooterLink to="/work">About Me</FooterLink>
-                            <FooterLink to="/resume">About Me</FooterLink>
-                            <FooterLink to="/contactme">About Me</FooterLink>
-                        </FooterLinkItems>
-                    </FooterLinksWrapper>
-                    <FooterLinksWrapper>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>Footer Title</FooterLinkTitle>
-                            <FooterLink to="/about">About Me</FooterLink>
-                            <FooterLink to="/work">About Me</FooterLink>
-                            <FooterLink to="/resume">About Me</FooterLink>
-                            <FooterLink to="/contactme">About Me</FooterLink>
-                        </FooterLinkItems>
-                        <FooterLinkItems>
-                            <FooterLinkTitle>Footer Title</FooterLinkTitle>
-                            <FooterLink to="/about">About Me</FooterLink>
-                            <FooterLink to="/work">About Me</FooterLink>
-                            <FooterLink to="/resume">About Me</FooterLink>
-                            <FooterLink to="/contactme">About Me</FooterLink>
-                        </FooterLinkItems>
-                    </FooterLinksWrapper>
-                </FooterLinksContainer>
+                <NavLogo to='/' onClick={toggleHome}>Z</NavLogo>
+                <ContactInfoWrap>
+                    <ContactLink as="a" target="_blank" href="mailto:zoeschmitt@hotmail.com">Email</ContactLink>
+                    <ContactLink as="a" target="_blank" href="https://www.linkedin.com/in/zmschmitt/">LinkedIn</ContactLink>
+                    <ContactLink as="a" target="_blank" href="https://github.com/zoeschmitt">Github</ContactLink>
+                </ContactInfoWrap>
             </FooterWrap>
         </FooterContainer>
     )

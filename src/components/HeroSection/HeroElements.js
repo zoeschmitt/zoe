@@ -46,9 +46,10 @@ export const HeroContent = styled.div`
 `;
 
 export const HeroH1 = styled.div`
-    color: #000;
+    color: #1b1b1b;
     font-size: 48px;
     text-align: center;
+    font-weight: 500;
 
     @media screen and (max-width: 768px) {
         font-size: 40px;
@@ -61,7 +62,7 @@ export const HeroH1 = styled.div`
 
 export const HeroP = styled.div`
     margin-top: 24px;
-    color: #000;
+    color: #1b1b1b;
     font-size: 24px;
     text-align: center;
     max-width: 600px;
@@ -85,9 +86,9 @@ export const HeroBtnWrapper = styled.div`
 export const ArrowForward = styled(MdArrowForward)`
     margin-left: 8px;
     font-size: 20px;
-`
+`;
 
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
-`
+`;

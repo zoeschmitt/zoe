@@ -29,7 +29,7 @@ export const NavBarContainer = styled.div`
     max-width: 1100px;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled(LinkS)`
     color: #1b1b1b;
     justify-self: flex-start;
     cursor: pointer;
@@ -112,7 +112,7 @@ export const NavBtnLink = styled(LinkR)`
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: #fff;
-        color: #fafafa;
+        background: #E0E0E0;
+        color: #1b1b1b;
     }
 `;
