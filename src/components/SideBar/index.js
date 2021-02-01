@@ -9,7 +9,7 @@ const SideBar = ({isOpen, toggle}) => {
             </Icon>
             <SideBarWrapper>
                 <SideBarMenu>
-                    <SideBarLink to="about" onClick={toggle}>About</SideBarLink>
+                    <SideBarLink to="aboutme" onClick={toggle}>About</SideBarLink>
                     <SideBarLink to="mywork" onClick={toggle}>My Work</SideBarLink>
                 </SideBarMenu>
                 <SideBtnWrap>

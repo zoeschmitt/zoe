@@ -92,7 +92,7 @@ export const secSix = {
     lightTextDesc: false,
     topLine: 'React',
     headline: 'Personal Website',
-    description: 'Responsive website I built using react js to showcase all my work!',
+    description: 'Responsive website I built using react js to showcase some of my work!',
     buttonLabel: 'See more',
     imgStart: true,
     img: '/images/mywebsite.png',
