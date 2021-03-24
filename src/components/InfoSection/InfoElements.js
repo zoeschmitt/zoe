@@ -11,14 +11,19 @@ export const InfoContainer = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
-    display: grid;
+    display: flex;
     z-index: 1;
-    height: 860px;
     width: 100%;
-    max-width: 1100px;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 150px 150px;
     justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        padding: 90px 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 40px 10px;
+    }
 `;
 
 export const InfoRow = styled.div`
@@ -29,6 +34,12 @@ export const InfoRow = styled.div`
 
     @media screen and (max-width: 768px) {
         grid-template-areas: ${({imgStart}) => (imgStart ? `'col1 col2'` : `'col1 col2' 'col2 col1'`)};
+    }
+
+    @media screen and (max-width: 620px) {
+        text-align: center;
+        justify-content: center;
+        grid-template-areas: 'col1' 'col2';
     }
 `;
 
@@ -81,16 +92,17 @@ export const Subtitle = styled.p`
     color: ${({darkText}) => (darkText ? '#1b1b1b' : '#fafafa')};
 `;
 
-export const BtnWrap = styled.div`
-    display: flex;
-    justify-content: flex-start;
-`;
-
 export const ImgWrap = styled.div`
-    max-width: 555px;
-    height: 100%;
-    padding: 0 0 0 35px;
-    padding: ${({imgStart}) => (imgStart ? '0 35px 0 0' : '0 0 0 35px')};
+    display:flex;
+    flex-direction: column;
+    align-items: ${({ imgStart }) => (imgStart ? 'flex-start' : 'flex-end')};
+    //justify-content: center;
+    padding:  0 50px;
+
+    @media screen and (max-width: 620px) {
+        align-items: center;
+        padding:  0;
+    }
 `;
 
 export const Img = styled.img`
@@ -101,6 +113,11 @@ export const Img = styled.img`
 export const BigBtnWrapper = styled.div`
     margin-top: 32px;
     display: flex;
+
+    @media screen and (max-width: 900px) {
+        justify-content: center;
+        width: 100%;
+    }
 `;
 
 export const ArrowForward = styled(MdArrowForward)`

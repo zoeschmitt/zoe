@@ -35,6 +35,25 @@ export const secTwo = {
 }
 
 export const secThree = {
+    id: 'trailerhub',
+    lightBg: true,
+    lightText: false,
+    lightTextDesc: true,
+    topLine: 'React',
+    headline: 'TrailerHub Web',
+    description: "Responsive website I created to introduce TrailerHub. It'll soon be updated to include links to find our mobile downloads, privacy policy, and terms of service. Ultimately we’ll be turning this into a full on TrailerHub web app!",
+    buttonLabel: 'See more',
+    imgStart: false,
+    img: '/images/trailerhub_web.png',
+    alt: 'Space',
+    dark: false,
+    primary: true,
+    darkText: true,
+    link: true,
+    linkText: 'Check it out'
+}
+
+export const secFour = {
     id: 'store',
     lightBg: false,
     lightText: true,
@@ -43,7 +62,7 @@ export const secThree = {
     headline: 'AirMarket',
     description: 'A project I built with React, Express, and MongoDB. AirMarket is an online marketplace for planes, helicopters, or any other aircrafts.',
     buttonLabel: 'See more',
-    imgStart: false,
+    imgStart: true,
     img: '/images/airmarket.png',
     alt: 'Space',
     dark: true,
@@ -51,7 +70,7 @@ export const secThree = {
     darkText: false
 }
 
-export const secFour = {
+export const secFive = {
     id: 'inventory',
     lightBg: true,
     lightText: false,
@@ -60,7 +79,7 @@ export const secFour = {
     headline: 'Inventory App',
     description: "Worked as head developer and designer to create a mobile inventory application for one of the largest CBD companies in San Antonio. The app supports searching and filtering as well as editing items and the amount of inventory at all locations.",
     buttonLabel: 'See more',
-    imgStart: true,
+    imgStart: false,
     img: '/images/inventory2.png',
     alt: 'Space',
     dark: false,
@@ -68,7 +87,7 @@ export const secFour = {
     darkText: true
 }
 
-export const secFive = {
+export const secSix = {
     id: 'contractor',
     lightBg: false,
     lightText: true,
@@ -77,7 +96,7 @@ export const secFive = {
     headline: 'Contractor App',
     description: 'A fully functional and animated demo app built in Swift with the SwiftUI framework. Based off my 20+ screen UI/UX design. The Contactor app allows contractors to pick up and create work orders, view a detailed schedule of their jobs, and keep track of contacts and invoices.',
     buttonLabel: 'See more',
-    imgStart: false,
+    imgStart: true,
     img: '/images/contractorapp.png',
     alt: 'Space',
     dark: true,
@@ -85,7 +104,7 @@ export const secFive = {
     darkText: false
 }
 
-export const secSix = {
+export const secSeven = {
     id: 'portfolio',
     lightBg: true,
     lightText: false,
@@ -94,7 +113,7 @@ export const secSix = {
     headline: 'Personal Website',
     description: 'Responsive website I built using react js to showcase some of my work!',
     buttonLabel: 'See more',
-    imgStart: true,
+    imgStart: false,
     img: '/images/mywebsite.png',
     alt: 'Space',
     dark: false,
