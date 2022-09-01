@@ -1,0 +1,30 @@
+@import "../../styles/global.scss";
+
+.header {
+  // background: ${({scrollNav}) => scrollNav ? '#fafafa' : 'transparent'};
+  height: $header-height;
+  margin-top: -$header-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .container {
+    padding: $vertical-padding $horizontal-padding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+
+    @include break-point(desktop-xxl) {
+      padding: 100px 200px;
+    }
+  }
+
+  .logo {
+    cursor: pointer;
+  }
+}

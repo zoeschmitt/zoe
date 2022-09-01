@@ -1,0 +1,65 @@
+$color-blue: #1d53ff;
+$color-grey: #ebecf0;
+$color-white: #fff;
+
+$header-height: 80px;
+$vertical-padding: 50px;
+$horizontal-padding: 90px;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: $color-blue;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  padding: $vertical-padding $horizontal-padding;
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin break-point($points...) {
+  @each $point in $points {
+    @if $point == mobile {
+      @media (max-width: 767px) {
+        @content;
+      }
+    } @else if spoint == tablet {
+      @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+      }
+    } @else if $point == desktop {
+      @media (min-width: 1025px) and (max-width: 1439px) {
+        @content;
+      }
+    } @else if $point == desktop-xl {
+      @media (min-width: 1440px) and (max-width: 1599px) {
+        @content;
+      }
+    } @else if $point == desktop-xxl {
+      @media (min-width: 1600px) {
+        @content;
+      }
+    } @else if $point == all-desktop {
+      @media (min-width: 1025px) {
+        @content;
+      }
+    }
+  }
+}
