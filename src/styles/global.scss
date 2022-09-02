@@ -26,6 +26,7 @@ body,
 }
 
 .content {
+  padding: 170px 150px;
   padding: $vertical-padding $horizontal-padding;
 }
 
@@ -37,7 +38,7 @@ body,
 @mixin break-point($points...) {
   @each $point in $points {
     @if $point == mobile {
-      @media (max-width: 767px) {
+      @media (max-width: 645px) {
         @content;
       }
     } @else if spoint == tablet {

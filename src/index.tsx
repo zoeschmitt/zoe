@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/global.scss";
@@ -10,8 +10,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Header />
-    <Home />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

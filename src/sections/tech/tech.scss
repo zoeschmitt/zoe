@@ -1,0 +1,21 @@
+@import "../../styles/global.scss";
+
+.tech {
+  margin: 50px 0;
+  justify-content: center;
+  img {
+    margin: 0 40px;
+  }
+  @media (max-width: 820px) {
+    img {
+      width: 30px;
+      margin: 0 25px;
+    }
+  }
+  @include break-point(mobile) {
+    img {
+      width: 20px;
+      margin: 0 10px;
+    }
+  }
+}
