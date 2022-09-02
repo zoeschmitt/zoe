@@ -1,7 +1,6 @@
 @import "../../styles/global.scss";
 
 .header {
-  // background: ${({scrollNav}) => scrollNav ? '#fafafa' : 'transparent'};
   height: $header-height;
   margin-top: -$header-height;
   display: flex;
@@ -10,21 +9,33 @@
   position: sticky;
   top: 0;
   z-index: 10;
-
   .container {
-    padding: $vertical-padding $horizontal-padding;
+    padding: 0 $horizontal-padding;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
     width: 100%;
-
-    @include break-point(desktop-xxl) {
-      padding: 100px 200px;
-    }
   }
-
   .logo {
     cursor: pointer;
+  }
+  .link {
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 16px;
+    color: $color-blue;
+  }
+  .menu {
+    display: none;
+  }
+  @include break-point(tablet) {
+    .nav-links {
+      display: none;
+    }
+    .menu {
+      display: block;
+    }
   }
 }

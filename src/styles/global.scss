@@ -3,8 +3,8 @@ $color-grey: #ebecf0;
 $color-white: #fff;
 
 $header-height: 80px;
-$vertical-padding: 50px;
-$horizontal-padding: 90px;
+$vertical-padding: 170px;
+$horizontal-padding: 150px;
 
 html,
 body,
@@ -26,7 +26,6 @@ body,
 }
 
 .content {
-  padding: 170px 150px;
   padding: $vertical-padding $horizontal-padding;
 }
 

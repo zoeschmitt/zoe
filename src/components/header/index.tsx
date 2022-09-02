@@ -8,10 +8,23 @@ const Header = () => {
         <a href="/" className="logo">
           <img src="assets/zs.svg" alt=""></img>
         </a>
-        <Link to="/about">about</Link>
-        <Link to="/experience">experience</Link>
-        <Link to="/work">work</Link>
-        <Link to="/contact">contact</Link>
+        <div className="nav-links">
+          <Link to="/about" className="link">
+            about
+          </Link>
+          <Link to="/experience" className="link">
+            experience
+          </Link>
+          <Link to="/work" className="link">
+            work
+          </Link>
+          <Link to="/contact" className="link">
+            contact
+          </Link>
+        </div>
+        <div className="menu">
+
+        </div>
       </div>
     </div>
   );
