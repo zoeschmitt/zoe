@@ -1,38 +1,11 @@
 $color-blue: #1d53ff;
 $color-grey: #ebecf0;
 $color-white: #fff;
+$color-black: #1E1E1E;
 
 $header-height: 80px;
 $vertical-padding: 170px;
 $horizontal-padding: 150px;
-
-html,
-body,
-#root {
-  height: 100%;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-  color: $color-blue;
-}
-
-.col {
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.content {
-  padding: $vertical-padding $horizontal-padding;
-}
-
-.end {
-  display: flex;
-  justify-content: flex-end;
-}
 
 @mixin break-point($points...) {
   @each $point in $points {
@@ -40,7 +13,7 @@ body,
       @media (max-width: 645px) {
         @content;
       }
-    } @else if spoint == tablet {
+    } @else if $point == tablet {
       @media (min-width: 768px) and (max-width: 1024px) {
         @content;
       }
@@ -62,4 +35,35 @@ body,
       }
     }
   }
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: $color-blue;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  padding: $vertical-padding $horizontal-padding;
+  @include break-point(mobile) {
+    padding: 150px 25px 50px;
+  }
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
 }
