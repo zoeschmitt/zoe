@@ -23,9 +23,11 @@
     @include break-point(mobile) {
       .title {
         font-size: 2.5rem;
+        line-height: 2.5rem;
       }
       .subtitle {
         font-size: 1.5rem;
+        margin: 10px 0 20px;
       }
     }
     .circle {

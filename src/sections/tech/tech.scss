@@ -14,7 +14,7 @@
   }
   p {
     color: $color-black;
-    max-width: 50%;
+    max-width: 70%;
     margin: 20px 0 50px;
   }
   img {
@@ -28,6 +28,10 @@
     }
   }
   @include break-point(mobile) {
+    h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
     img {
       height: 20px;
       margin: 0 10px;
