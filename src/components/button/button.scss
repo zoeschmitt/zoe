@@ -3,7 +3,7 @@
 .btn {
   min-height: 50px;
   min-width: 100px;
-  padding: 1rem 2.1rem;
+  padding: 0.8rem 2.1rem;
   -webkit-font-smoothing: antialiased;
   border-radius: 0.5em;
   cursor: pointer;
@@ -17,6 +17,9 @@
   color: $color-blue;
   -webkit-transition: all 200ms cubic-bezier(0.211, 0.007, 0.355, 1);
   transition: all 200ms cubic-bezier(0.211, 0.007, 0.355, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &[disabled],
   &.state--disabled {
@@ -31,6 +34,7 @@
     box-shadow: 0px 8px 14px -5px $color-blue;
     background: $color-blue;
     color: $color-white;
+    opacity: 1;
   }
 
   &:focus {
