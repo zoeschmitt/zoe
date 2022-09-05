@@ -9,12 +9,13 @@
     .title {
       font-size: 90px;
       font-weight: 600;
-      margin: 2px 0;
+      line-height: 90px;
+      margin: 0;
     }
     .subtitle {
       font-size: 40px;
       font-weight: 300;
-      margin: 2px 0;
+      margin: 20px 0 40px;
     }
     @include break-point(mobile) {
       .title {
