@@ -1,13 +1,13 @@
 @import "../../styles/global.scss";
 
-.tech {
+.skills {
   width: 100%;
   margin: 150px 0;
   justify-content: center;
   .col {
     align-items: center;
     text-align: center;
-    .tech-stack {
+    .tech {
       display: flex;
     }
   }
@@ -36,7 +36,7 @@
       margin: 0;
     }
     .col {
-      .tech-stack {
+      .tech {
         flex-wrap: wrap;
         justify-content: center;
         img {

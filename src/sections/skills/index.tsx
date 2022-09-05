@@ -1,16 +1,16 @@
 import Col from "../../components/col";
-import "./tech.scss";
+import "./skills.scss";
 
-const Tech = () => {
+const Skills = () => {
   return (
-    <section className="tech">
+    <section id="skills" className="skills">
       <Col>
         <h2>My Tech Stack</h2>
         <p>
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
           ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum{" "}
         </p>
-        <div className="tech-stack">
+        <div className="tech">
           <img src="assets/js.svg" alt="javascript" />
           <img src="assets/ts.svg" alt="typescript" />
           <img src="assets/swift.svg" alt="swift programming language" />
@@ -24,4 +24,4 @@ const Tech = () => {
   );
 };
 
-export default Tech;
+export default Skills;
