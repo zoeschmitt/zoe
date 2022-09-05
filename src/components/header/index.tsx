@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import classnames from "classnames";
+import routes from "../../data/routes";
 import "./header.scss";
 
 const CSS_PREFIX = "header";
@@ -37,18 +38,11 @@ const Header = (props: Props) => {
           <img src="assets/zs.svg" alt=""></img>
         </button>
         <div className="nav-links">
-          <Link to="/about" className="link">
-            about
-          </Link>
-          <Link to="/experience" className="link">
-            experience
-          </Link>
-          <Link to="/work" className="link">
-            work
-          </Link>
-          <Link to="/contact" className="link">
-            contact
-          </Link>
+          {routes.map((route) => (
+            <Link to={`/${route}`} className="link">
+              {route}
+            </Link>
+          ))}
         </div>
         <button className="menu" aria-label="open menu" onClick={toggle}>
           <div className="line"></div>
