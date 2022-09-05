@@ -1,5 +1,4 @@
 import Col from "../../components/col";
-import Row from "../../components/row";
 import "./tech.scss";
 
 const Tech = () => {
@@ -11,7 +10,7 @@ const Tech = () => {
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
           ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum{" "}
         </p>
-        <Row>
+        <div className="tech-stack">
           <img src="assets/js.svg" alt="javascript" />
           <img src="assets/ts.svg" alt="typescript" />
           <img src="assets/swift.svg" alt="swift programming language" />
@@ -19,7 +18,7 @@ const Tech = () => {
           <img src="assets/flutter.svg" alt="flutter" />
           <img src="assets/react.svg" alt="react js" />
           <img src="assets/angular.svg" alt="angular" />
-        </Row>
+        </div>
       </Col>
     </section>
   );
