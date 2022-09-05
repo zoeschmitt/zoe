@@ -1,13 +1,43 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import classnames from "classnames";
 import "./header.scss";
 
-const Header = () => {
+const CSS_PREFIX = "header";
+
+type Props = {
+  toggle: () => void;
+};
+
+const Header = (props: Props) => {
+  const { toggle } = props;
+  const [scrollNav, setScrollNav] = useState(false);
+  const changeNav = () => {
+    window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
   return (
-    <div className="header">
-      <div className="container">
-        <a href="/" className="logo">
+    <nav
+      className={classnames(CSS_PREFIX, {
+        [`${CSS_PREFIX}--show-menu`]: scrollNav,
+      })}
+    >
+      <div className="container content">
+        <LinkS
+          to="/"
+          className="logo"
+          onClick={toggleHome}
+          aria-label="scroll to top"
+        >
           <img src="assets/zs.svg" alt=""></img>
-        </a>
+        </LinkS>
         <div className="nav-links">
           <Link to="/about" className="link">
             about
@@ -22,11 +52,13 @@ const Header = () => {
             contact
           </Link>
         </div>
-        <div className="menu">
-
-        </div>
+        <button className="menu" aria-label="open menu" onClick={toggle}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

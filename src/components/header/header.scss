@@ -1,5 +1,29 @@
 @import "../../styles/global.scss";
 
+@mixin hover-animation {
+  padding: 9px;
+  border-radius: 10px;
+  -webkit-transition: all 375ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 375ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.364);
+    -webkit-transform: translate(0px, 0.2rem);
+    -ms-transform: translate(0px, 0.2rem);
+    transform: translate(0px, 0.2rem);
+  }
+}
+
+@mixin show-menu {
+  .container {
+    .nav-links {
+      display: none !important;
+    }
+    .menu {
+      display: block !important;
+    }
+  }
+}
+
 .header {
   height: $header-height;
   margin-top: -$header-height;
@@ -9,33 +33,51 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  &--show-menu {
+    @include show-menu;
+  }
   .container {
-    padding: 0 $horizontal-padding;
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
     width: 100%;
-  }
-  .logo {
-    cursor: pointer;
-  }
-  .link {
-    font-weight: 600;
-    text-decoration: none;
-    margin: 0 30px;
-    font-size: 16px;
-    color: $color-blue;
-  }
-  .menu {
-    display: none;
-  }
-  @include break-point(tablet) {
+    .logo {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
     .nav-links {
-      display: none;
+      display: block;
+      .link {
+        @include hover-animation;
+        display: inline-block;
+        font-weight: 600;
+        text-decoration: none;
+        margin: 0 30px;
+        font-size: 16px;
+        color: $color-blue;
+      }
     }
     .menu {
-      display: block;
+      @include hover-animation;
+      display: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      .line {
+        width: 1.5rem;
+        height: 2px;
+        background-color: $color-blue;
+        margin: 4px 0;
+        border-radius: 1px;
+      }
     }
+  }
+  @media (max-width: 768px) {
+    @include show-menu;
   }
 }
