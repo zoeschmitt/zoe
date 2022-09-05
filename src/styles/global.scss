@@ -37,6 +37,13 @@ $horizontal-padding: 150px;
   }
 }
 
+@mixin focus {
+  &:focus {
+    outline: 1px dashed $color-black;
+    outline-offset: 1.5px;
+  }
+}
+
 html,
 body,
 #root {

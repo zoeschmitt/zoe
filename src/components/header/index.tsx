@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 import classnames from "classnames";
 import "./header.scss";
@@ -30,14 +29,13 @@ const Header = (props: Props) => {
       })}
     >
       <div className="container content">
-        <LinkS
-          to="/"
+        <button
           className="logo"
           onClick={toggleHome}
           aria-label="scroll to top"
         >
           <img src="assets/zs.svg" alt=""></img>
-        </LinkS>
+        </button>
         <div className="nav-links">
           <Link to="/about" className="link">
             about
