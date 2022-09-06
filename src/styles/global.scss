@@ -4,6 +4,7 @@ $color-white: #fff;
 $color-black: #1E1E1E;
 
 $header-height: 80px;
+$header-padding: 80px;
 $vertical-padding: 170px;
 $horizontal-padding: 150px;
 
@@ -44,6 +45,16 @@ $horizontal-padding: 150px;
   }
 }
 
+@mixin hover-animation {
+  -webkit-transition: transform 375ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 375ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  &:hover {
+    -webkit-transform: translate(0px, -0.1rem);
+    -ms-transform: translate(0px, -0.1rem);
+    transform: translate(0px, -0.1rem);
+  }
+}
+
 html,
 body,
 #root {
@@ -51,6 +62,7 @@ body,
   margin: 0;
   font-family: "Open Sans", sans-serif;
   color: $color-blue;
+  scroll-behavior: smooth;
 }
 
 .col {
