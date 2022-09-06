@@ -46,7 +46,8 @@
       }
     }
     .nav-links {
-      display: block;
+      display: flex;
+      list-style: none;
       .link {
         border-radius: 10px;
         padding: 9px;

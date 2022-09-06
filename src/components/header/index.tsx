@@ -27,18 +27,20 @@ const Header = (props: Props) => {
       <div className="container">
         <button
           className="logo"
-          onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="scroll to top"
         >
           <img src="assets/zs.svg" alt=""></img>
         </button>
-        <div className="nav-links">
+        <ul className="nav-links">
           {routes.map((route) => (
-            <a href={`/#${route}`} className="link">
-              {route}
-            </a>
+            <li>
+              <a href={`/#${route}`} className="link">
+                {route}
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
         <button className="menu" aria-label="open menu" onClick={toggle}>
           <div className="line"></div>
           <div className="line"></div>
