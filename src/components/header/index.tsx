@@ -2,30 +2,37 @@ import { useEffect, useState } from "react";
 import classnames from "classnames";
 import routes from "../../data/routes";
 import { useLocation } from "react-router-dom";
+import NavMenu from "../nav-menu";
 import "./header.scss";
 
 const CSS_PREFIX = "header";
 
-type Props = {
-  toggle: () => void;
-};
-
-const Header = (props: Props) => {
-  const { toggle } = props;
+const Header = () => {
   const [scrollNav, setScrollNav] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [currentRoute, setCurrentRoute] = useState(0);
   const location = useLocation();
+
   const changeNav = () => {
     window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);
   };
+
+  const toggleMenu = () => {
+    const body = document.getElementById("body");
+    body?.classList.toggle("no-scroll");
+    setMenuOpen(!menuOpen);
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
+
   useEffect(() => {
     const hash = location.hash.replace("#", "");
     const current = routes.findIndex((i) => i === hash);
     setCurrentRoute(current);
   }, [location]);
+
   return (
     <nav
       className={classnames(CSS_PREFIX, {
@@ -49,12 +56,13 @@ const Header = (props: Props) => {
             </li>
           ))}
         </ul>
-        <button className="menu" aria-label="open menu" onClick={toggle}>
+        <button className="menu" aria-label="open menu" onClick={toggleMenu}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>
         </button>
       </div>
+      <NavMenu show={menuOpen} toggle={toggleMenu} />
     </nav>
   );
 };

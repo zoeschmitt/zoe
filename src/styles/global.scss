@@ -83,3 +83,7 @@ body,
   display: flex;
   justify-content: flex-end;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
