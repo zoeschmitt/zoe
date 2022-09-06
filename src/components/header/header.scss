@@ -31,7 +31,6 @@
     z-index: 1;
     width: 100%;
     .logo {
-      @include focus;
       cursor: pointer;
       height: 40px;
       width: 40px;
@@ -42,12 +41,13 @@
       &:hover {
         opacity: 0.8;
       }
+      &:focus {
+        @include focus;
+      }
     }
     .nav-links {
       display: block;
       .link {
-        @include focus;
-        @include hover-animation;
         border-radius: 10px;
         padding: 9px;
         display: inline-block;
@@ -60,28 +60,34 @@
           margin-right: 0;
         }
         &:hover {
+          @include lift-animation;
           background-color: rgba(255, 255, 255, 0.364);
+        }
+        &:focus {
+          @include focus;
         }
       }
     }
     .menu {
-      @include hover-animation;
-      @include focus;
       padding: 9px;
       border-radius: 10px;
       display: none;
       border: none;
       background-color: transparent;
       cursor: pointer;
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.364);
-      }
       .line {
         width: 1.5rem;
         height: 2px;
         background-color: $color-blue;
         margin: 4px 0;
         border-radius: 1px;
+      }
+      &:hover {
+        @include lift-animation;
+        background-color: rgba(255, 255, 255, 0.364);
+      }
+      &:focus {
+        @include focus;
       }
     }
     @include break-point(mobile) {

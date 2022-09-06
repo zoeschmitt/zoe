@@ -1,7 +1,6 @@
 @import "../../styles/global.scss";
 
 .btn {
-  @include focus;
   min-height: 50px;
   min-width: 100px;
   padding: 0.8rem 2.1rem;
@@ -39,7 +38,8 @@
   }
 
   &:active,
-  &.state--active {
+  &.state--active,
+  &:focus {
     @include focus;
   }
 }
