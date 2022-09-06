@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import classnames from "classnames";
 import routes from "../../data/routes";
+import { useLocation } from "react-router-dom";
 import "./header.scss";
 
 const CSS_PREFIX = "header";
@@ -12,29 +13,36 @@ type Props = {
 const Header = (props: Props) => {
   const { toggle } = props;
   const [scrollNav, setScrollNav] = useState(false);
+  const [currentRoute, setCurrentRoute] = useState(0);
+  const location = useLocation();
   const changeNav = () => {
     window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);
   };
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
+  useEffect(() => {
+    const hash = location.hash.replace("#", "");
+    const current = routes.findIndex((i) => i === hash);
+    setCurrentRoute(current);
+  }, [location]);
   return (
     <nav
       className={classnames(CSS_PREFIX, {
         [`${CSS_PREFIX}--show-menu`]: scrollNav,
       })}
+      aria-label="Main Navigation"
     >
       <div className="container">
-        <button
-          className="logo"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          aria-label="scroll to top"
-        >
+        <a className="logo" aria-label="scroll to top" href="/">
           <img src="assets/zs.svg" alt=""></img>
-        </button>
+        </a>
         <ul className="nav-links">
-          {routes.map((route) => (
-            <li>
+          {routes.map((route, index) => (
+            <li
+              key={index}
+              aria-current={index === currentRoute ? "page" : false}
+            >
               <a href={`/#${route}`} className="link">
                 {route}
               </a>

@@ -68,6 +68,10 @@
           @include focus;
         }
       }
+      a [aria-current="page"] {
+        background-color: $color-blue;
+        color: $color-white;
+      }
     }
     .menu {
       padding: 9px;
