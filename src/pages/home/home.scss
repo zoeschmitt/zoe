@@ -1,6 +1,27 @@
 @import "../../styles/global.scss";
 
-// .home-page {
-  
-// }
-
+.home-page {
+  .skip {
+    position: absolute;
+    top: auto;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -99;
+    &:focus,
+    &:active {
+      background-color: $color-blue;
+      color: $color-white;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $header-height;
+      overflow: auto;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

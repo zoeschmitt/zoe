@@ -14,6 +14,9 @@ const Home = () => {
   };
   return (
     <Page className="home-page">
+      <a className="skip" href="#content">
+        Skip to Content
+      </a>
       <Header toggle={toggle} />
       <SideContent>
         <a
@@ -33,9 +36,11 @@ const Home = () => {
           <img src="assets/linkedin.svg" alt="" />
         </a>
       </SideContent>
-      <Hero />
-      <About />
-      <Skills />
+      <div id="content">
+        <Hero />
+        <About />
+        <Skills />
+      </div>
     </Page>
   );
 };
