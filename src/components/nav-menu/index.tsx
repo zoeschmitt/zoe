@@ -25,9 +25,9 @@ const NavMenu = (props: Props) => {
             <img src="assets/zs_white.svg" alt=""></img>
           </a>
           <button className="menu" aria-label="open menu" onClick={toggle}>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
+            <div className="line-top"></div>
+            <div className="line-mid"></div>
+            <div className="line-bot"></div>
           </button>
         </div>
       </Row>
