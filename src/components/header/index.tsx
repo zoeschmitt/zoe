@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
 import classnames from "classnames";
 import routes from "../../data/routes";
 import "./header.scss";
@@ -20,28 +18,25 @@ const Header = (props: Props) => {
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
   }, []);
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
   return (
     <nav
       className={classnames(CSS_PREFIX, {
         [`${CSS_PREFIX}--show-menu`]: scrollNav,
       })}
     >
-      <div className="container content">
+      <div className="container">
         <button
           className="logo"
-          onClick={toggleHome}
+          onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
           aria-label="scroll to top"
         >
           <img src="assets/zs.svg" alt=""></img>
         </button>
         <div className="nav-links">
           {routes.map((route) => (
-            <Link to={`/${route}`} className="link">
+            <a href={`/#${route}`} className="link">
               {route}
-            </Link>
+            </a>
           ))}
         </div>
         <button className="menu" aria-label="open menu" onClick={toggle}>
