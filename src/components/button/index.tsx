@@ -9,20 +9,34 @@ type ButtonProps = {
   active?: boolean;
   disabled?: boolean;
   className?: string;
+  secondary?: boolean;
+  onClick: () => void;
 };
 
 const Button = (props: ButtonProps) => {
-  const { children, active, disabled, className } = props;
+  const {
+    children,
+    active,
+    disabled,
+    className,
+    secondary,
+    onClick,
+    ...remaningProps
+  } = props;
   return (
     <button
       className={classnames(
         CSS_PREFIX,
         {
+          [`${CSS_PREFIX}--secondary`]: Boolean(secondary),
           [`${CSS_STATE}--active`]: Boolean(active),
           [`${CSS_STATE}--disabled`]: Boolean(disabled),
         },
         className
       )}
+      disabled={disabled}
+      onClick={onClick}
+      {...remaningProps}
     >
       {children}
     </button>

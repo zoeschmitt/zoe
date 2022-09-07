@@ -11,15 +11,20 @@
   font-weight: 500;
   outline: none;
   white-space: nowrap;
-  background: transparent;
+  background: $color-blue;
   border: 2px solid $color-blue;
   text-decoration: none;
-  color: $color-blue;
+  color: $color-white;
   -webkit-transition: transform 200ms cubic-bezier(0.211, 0.007, 0.355, 1);
   transition: transform 200ms cubic-bezier(0.211, 0.007, 0.355, 1);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &--secondary {
+    color: $color-blue;
+    background: transparent;
+  }
 
   &[disabled],
   &.state--disabled {
