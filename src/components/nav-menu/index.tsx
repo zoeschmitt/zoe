@@ -13,11 +13,16 @@ type Props = {
 
 const NavMenu = (props: Props) => {
   const { show, toggle } = props;
+  const navigate = (route: string) => {
+    toggle();
+    document.getElementById(route)?.scrollIntoView();
+  };
   return (
     <nav
       className={classnames(CSS_PREFIX, {
         [`${CSS_PREFIX}--show`]: show,
       })}
+      id="nav-menu"
     >
       <Row className="header-row">
         <div className="top-header">
@@ -39,9 +44,7 @@ const NavMenu = (props: Props) => {
                 <Link
                   className="link"
                   to={`/#${route}`}
-                  onClick={() =>
-                    document.getElementById(route)?.scrollIntoView()
-                  }
+                  onClick={() => navigate(route)}
                 >
                   {route}
                 </Link>

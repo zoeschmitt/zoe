@@ -9,7 +9,12 @@ const Hero = () => {
         <Col>
           <h1 className="title">hi, i'm zoe</h1>
           <p className="subtitle">software engineer + designer</p>
-          <Button>more about me</Button>
+          <Button
+            onClick={() => document.getElementById("about")?.scrollIntoView()}
+            aria-label="Go to about me section"
+          >
+            more about me
+          </Button>
         </Col>
         <div className="end">
           <div className="circle" aria-hidden="true">
