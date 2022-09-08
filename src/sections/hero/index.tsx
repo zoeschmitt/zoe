@@ -4,7 +4,7 @@ import "./hero.scss";
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero content">
+    <section id="hero" className="hero">
       <div className="hero-grid">
         <Col>
           <h1 className="title">hi, i'm zoe</h1>

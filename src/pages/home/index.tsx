@@ -1,4 +1,4 @@
-import Header from "../../components/header";
+import Nav from "../../sections/nav";
 import Page from "../../components/page";
 import SideContent from "../../components/side-content";
 import About from "../../sections/about";
@@ -12,7 +12,7 @@ const Home = () => {
       <a className="skip" href="#content">
         Skip to Content
       </a>
-      <Header />
+      <Nav />
       <SideContent>
         <a
           href="https://github.com/zoeschmitt"

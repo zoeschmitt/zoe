@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import classnames from "classnames";
-import routes from "../../data/routes";
 import { useLocation } from "react-router-dom";
-import NavMenu from "../nav-menu";
-import "./header.scss";
+import "./nav.scss";
+import routes from "../../data/routes";
+import NavMenu from "../../components/nav-menu";
 
-const CSS_PREFIX = "header";
+const CSS_PREFIX = "nav";
 
-const Header = () => {
+const Nav = () => {
   const [scrollNav, setScrollNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentRoute, setCurrentRoute] = useState(0);
@@ -67,4 +67,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Nav;

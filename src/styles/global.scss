@@ -5,7 +5,7 @@ $color-black: #1e1e1e;
 
 $header-height: 80px;
 $header-padding: 80px;
-$vertical-padding: 170px;
+$vertical-padding: 200px;
 $horizontal-padding: 150px;
 
 @mixin break-point($points...) {
@@ -72,7 +72,7 @@ body,
   flex-direction: row;
 }
 
-.content {
+section {
   padding: $vertical-padding $horizontal-padding;
   @include break-point(mobile) {
     padding: 150px 25px 50px;

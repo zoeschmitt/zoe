@@ -1,9 +1,6 @@
 @import "../../styles/global.scss";
 
 .skills {
-  width: 100%;
-  margin: 150px 0;
-  justify-content: center;
   .col {
     align-items: center;
     text-align: center;
@@ -17,7 +14,7 @@
   }
   p {
     color: $color-black;
-    max-width: 70%;
+    max-width: 50%;
     margin: 20px 0 50px;
   }
   img {
