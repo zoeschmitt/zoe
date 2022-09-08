@@ -5,6 +5,7 @@ import About from "../../sections/about";
 import Hero from "../../sections/hero";
 import Skills from "../../sections/skills";
 import "./home.scss";
+import Footer from "../../sections/footer";
 
 const Home = () => {
   return (
@@ -36,6 +37,7 @@ const Home = () => {
         <About />
         <Skills />
       </div>
+      <Footer />
     </Page>
   );
 };
