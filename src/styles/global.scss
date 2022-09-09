@@ -6,7 +6,7 @@ $color-dark-grey: #525866;
 
 $header-height: 80px;
 $header-padding: 80px;
-$vertical-padding: 200px;
+$vertical-padding: 250px;
 $horizontal-padding: 150px;
 
 @mixin break-point($points...) {
@@ -87,4 +87,16 @@ section {
 
 .no-scroll {
   overflow: hidden;
+}
+
+h2 {
+  font-size: 3rem;
+  color: $color-blue;
+  margin: 5px 0;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: $color-dark-grey;
 }

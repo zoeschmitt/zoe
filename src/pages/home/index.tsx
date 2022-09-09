@@ -3,9 +3,9 @@ import Page from "../../components/page";
 import SideContent from "../../components/side-content";
 import About from "../../sections/about";
 import Hero from "../../sections/hero";
-import Skills from "../../sections/skills";
 import "./home.scss";
 import Footer from "../../sections/footer";
+import Tech from "../../sections/tech";
 
 const Home = () => {
   return (
@@ -35,7 +35,7 @@ const Home = () => {
       <div id="content">
         <Hero />
         <About />
-        <Skills />
+        <Tech />
       </div>
       <Footer />
     </Page>

@@ -1,0 +1,31 @@
+@import "../../styles/global.scss";
+
+.tech {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+      text-align: center;
+      width: 70%;
+    }
+    .grid {
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: center;
+      margin-top: 8rem;
+      &:last-of-type {
+        margin-top: 6rem;
+      }
+      .item {
+        height: 50px;
+        &--vert {
+          height: 90px;
+        }
+      }
+    }
+  }
+}
