@@ -2,13 +2,14 @@ import Row from "../../components/row";
 import "./footer.scss";
 
 const Footer = () => {
-  return <footer className="footer">
+  return (
+    <footer className="footer">
+      <hr />
       <Row>
-          <p>
-              Designed & Built by Zoe Schmitt
-          </p>
+        <p>Designed & Built by Zoe Schmitt</p>
       </Row>
-  </footer>;
+    </footer>
+  );
 };
 
 export default Footer;
