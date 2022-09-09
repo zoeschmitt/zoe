@@ -1,2 +1,2 @@
-const routes = ["about", "skills", "projects", "contact"];
+const routes = ["about", "projects", "skills", "contact"];
 export default routes;
