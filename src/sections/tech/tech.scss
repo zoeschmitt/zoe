@@ -27,5 +27,44 @@
         }
       }
     }
+    @media (max-width: 1200px) {
+      .text {
+        text-align: center;
+        width: 100%;
+      }
+      .grid {
+        gap: 20px;
+        .item {
+          height: 40px;
+          &--vert {
+            height: 80px;
+          }
+        }
+      }
+    }
+    @media (max-width: 900px) {
+      .grid {
+        width: 100%;
+        .item {
+          height: 30px;
+          &--vert {
+            height: 60px;
+          }
+        }
+      }
+    }
+    @media (max-width: 450px) {
+      .grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        row-gap: 100px;
+        .item {
+          height: 40px;
+          &--vert {
+            height:80px;
+          }
+        }
+      }
+    }
   }
 }
