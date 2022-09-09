@@ -6,7 +6,7 @@ $color-dark-grey: #525866;
 
 $header-height: 80px;
 $header-padding: 80px;
-$vertical-padding: 250px;
+$vertical-padding: 200px;
 $horizontal-padding: 150px;
 
 @mixin break-point($points...) {
@@ -75,6 +75,9 @@ body,
 
 section {
   padding: $vertical-padding $horizontal-padding;
+  @include break-point(desktop-xxl) {
+    padding: 200px 250px;
+  }
   @include break-point(mobile) {
     padding: 150px 25px 50px;
   }
@@ -85,6 +88,10 @@ section {
   justify-content: flex-end;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .no-scroll {
   overflow: hidden;
 }
@@ -93,10 +100,17 @@ h2 {
   font-size: 3rem;
   color: $color-blue;
   margin: 5px 0;
+
+  @include break-point(mobile) {
+    font-size: 1.8rem;
+  }
 }
 
 p {
   font-size: 1.2rem;
   line-height: 1.7;
   color: $color-dark-grey;
+  @include break-point(mobile) {
+    font-size: 1rem;
+  }
 }

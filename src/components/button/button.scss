@@ -47,4 +47,11 @@
   &:focus {
     @include focus;
   }
+
+  @include break-point(mobile) {
+    min-height: 30px;
+    min-width: 100px;
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+  }
 }
