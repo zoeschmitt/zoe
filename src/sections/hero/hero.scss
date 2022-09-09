@@ -1,98 +1,62 @@
 @import "../../styles/global.scss";
 
 .hero {
+  width: 100%;
   background-color: $color-grey;
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 12rem 0;
+  p {
+    color: $color-blue;
+  }
+  .title {
+    font-size: 90px;
+    font-weight: 600;
+    line-height: 90px;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 20px 0 40px;
+  }
+  .btn {
+    align-self: center;
+  }
+  .arrow {
+    height: 2rem;
+    margin-top: 4rem;
+    opacity: 0.2;
+  }
+  @include break-point(desktop-xxl) {
+    padding: 14rem 0;
+  }
+  @include break-point(mobile) {
     .title {
-      font-size: 90px;
-      font-weight: 600;
-      line-height: 90px;
-      margin: 0;
+      font-size: 3rem;
+      line-height: 3.2rem;
     }
     .subtitle {
-      font-size: 40px;
-      font-weight: 300;
-      margin: 20px 0 40px;
+      font-size: 1.5rem;
+      margin: 10px 0 20px;
+    }
+  }
+  .row {
+    justify-content: space-between;
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    row-gap: 100px;
+    .end,
+    .col {
+      justify-content: center;
+      text-align: center;
     }
     .btn {
-      align-self: flex-start;
+      align-self: center;
     }
-    @include break-point(mobile) {
-      .title {
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-      }
-      .subtitle {
-        font-size: 1.5rem;
-        margin: 10px 0 20px;
-      }
-    }
-    .circle {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.786);
-      box-shadow: 0px 0px 126px 11px rgba(29, 83, 255, 0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-        position: absolute;
-        -webkit-animation: spin 20s linear infinite;
-        -moz-animation: spin 20s linear infinite;
-        animation: spin 20s linear infinite;
-        pointer-events: none;
-        user-select: none;
-      }
-      .emoji {
-        position: absolute;
-        font-size: 90px;
-      }
-      @include break-point(mobile) {
-        width: 220px;
-        height: 220px;
-        img {
-          width: 190px;
-        }
-        .emoji {
-          font-size: 60px;
-        }
-      }
-    }
-    .row {
-      justify-content: space-between;
-    }
-    @media (max-width: 1200px) {
-      grid-template-columns: 1fr;
-      row-gap: 100px;
-      .end,
-      .col {
-        justify-content: center;
-        text-align: center;
-      }
-      .btn {
-        align-self: center;
-      }
-    }
-  }
-}
-
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
