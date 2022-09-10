@@ -15,7 +15,7 @@ const About = () => {
             products. In the past I've worked as a UI/UX designer and developer.
           </p>
           <p>
-            I enjoy working on challenging problems and finding straight forward
+            I enjoy working on challenging projects and building straight-forward
             solutions through design and code. I focus on simplicity,
             accessibility, and human-centered approaches to both development and
             design.

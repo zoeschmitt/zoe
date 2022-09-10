@@ -1,5 +1,6 @@
 import Card from "../../components/card";
 import Col from "../../components/col";
+import projects from "../../data/projects";
 import "./projects.scss";
 
 const Projects = () => {
@@ -10,9 +11,9 @@ const Projects = () => {
         <p>Here are some of my favorite projects I've worked on.</p>
       </Col>
       <div className="grid">
-        <Card/>
-        <Card/>
-        <Card/>
+        {projects.map((project, index) => (
+          <Card key={index} {...project} />
+        ))}
       </div>
     </section>
   );

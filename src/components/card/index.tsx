@@ -1,18 +1,37 @@
+import Project from "../../types/project";
 import Chip from "../chip";
+import Row from "../row";
 import "./card.scss";
 
-const chips = ["AWS", "Swift", "iOS", "SwiftUI", "Blockchain"];
-
-const Card = () => {
+const Card = (project: Project) => {
   return (
     <div className="card">
-      <img src="assets/digital-market.png" alt="" />
+      <img
+        className="project-image"
+        src={`assets/${project.image}`}
+        alt={project.alt}
+      />
       <div className="details">
         <div className="content">
-          <h3>Digital Market</h3>
+          <Row>
+            <h3>{project.name}</h3>
+            <div className="source-code-link">
+              <a
+                href={project.source}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Github"
+              >
+                <img
+                  src="assets/github_black.svg"
+                  alt={`Source code link for ${project.name}`}
+                />
+              </a>
+            </div>
+          </Row>
           <div className="chips">
-            {chips.map((chip) => (
-              <Chip text={chip} />
+            {project.categories.map((chip, index) => (
+              <Chip key={index} text={chip} />
             ))}
           </div>
         </div>
