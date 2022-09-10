@@ -6,6 +6,7 @@ import Hero from "../../sections/hero";
 import "./home.scss";
 import Footer from "../../sections/footer";
 import Tech from "../../sections/tech";
+import Projects from "../../sections/projects";
 
 const Home = () => {
   return (
@@ -35,6 +36,7 @@ const Home = () => {
       <div id="content">
         <Hero />
         <About />
+        <Projects />
         <Tech />
       </div>
       <Footer />
