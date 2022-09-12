@@ -2,9 +2,9 @@ import Project from "../types/project";
 
 const projects: Project[] = [
   {
-    name: "Digital Market & Foundation",
+    name: "Digital Asset Marketplace",
     description: [""],
-    categories: ["TypeScript", "Swift", "AWS", "SwiftUI", "API", "Blockchain"],
+    categories: ["TypeScript", "AWS", "Swift", "SwiftUI", "Blockchain"],
     image: "digital-market.png",
     alt: "Screenshot of home page of the Digital Market iOS application",
     source: "https://github.com/zoeschmitt/digital-market",
