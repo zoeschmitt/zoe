@@ -29,7 +29,7 @@ const Nav = () => {
 
   useEffect(() => {
     const hash = location.hash.replace("#", "");
-    const current = routes.findIndex((i) => i === hash);
+    const current = routes.findIndex((i) => i.name === hash);
     setCurrentRoute(current);
   }, [location]);
 
@@ -50,8 +50,8 @@ const Nav = () => {
               key={index}
               aria-current={index === currentRoute ? "page" : false}
             >
-              <a href={`/#${route}`} className="link">
-                {route}
+              <a href={route.href ?? `/#${route}`} className="link">
+                {route.name}
               </a>
             </li>
           ))}

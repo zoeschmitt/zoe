@@ -1,6 +1,7 @@
 import classnames from "classnames";
 import { Link } from "react-router-dom";
 import routes from "../../data/routes";
+import Route from "../../types/route";
 import Row from "../row";
 import "./nav-menu.scss";
 
@@ -13,9 +14,11 @@ type Props = {
 
 const NavMenu = (props: Props) => {
   const { show, toggle } = props;
-  const navigate = (route: string) => {
+
+  const navLinkOnClick = (route: Route) => {
     toggle();
-    document.getElementById(route)?.scrollIntoView();
+    if (route.href) window.location.href = route.href;
+    else document.getElementById(route.name)?.scrollIntoView();
   };
   return (
     <nav
@@ -43,10 +46,10 @@ const NavMenu = (props: Props) => {
               <li key={index}>
                 <Link
                   className="link"
-                  to={`/#${route}`}
-                  onClick={() => navigate(route)}
+                  to={route.href ? "#" : `/#${route}`}
+                  onClick={() => navLinkOnClick(route)}
                 >
-                  {route}
+                  {route.name}
                 </Link>
               </li>
             ))}
