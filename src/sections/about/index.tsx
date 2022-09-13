@@ -10,13 +10,11 @@ const About = () => {
         <Col>
           <h2>about me</h2>
           <p>
-            I'm currently a design engineer at Visa, where I build fully
-            accessible applications that help shape the direction of our brand and
-            products. In the past I've worked as a UI/UX designer and developer.
+            I'm currently a design engineer at Visa, where I build web and mobile apps that are pixel-perfect and WCAG (2.1) accessible. In the past I've worked as a UI/UX designer and developer.
           </p>
           <p>
-            I enjoy working on challenging projects and building straight-forward
-            solutions through design and code. I focus on simplicity,
+            I enjoy working on challenging projects and finding creative ways to solve them
+            with design and code. I focus on simplicity,
             accessibility, and human-centered approaches to both development and
             design.
           </p>
