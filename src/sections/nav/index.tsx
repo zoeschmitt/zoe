@@ -50,7 +50,7 @@ const Nav = () => {
               key={index}
               aria-current={index === currentRoute ? "page" : false}
             >
-              <a href={route.href ?? `/#${route}`} className="link">
+              <a href={route.href ?? `/#${route.name}`} className="link">
                 {route.name}
               </a>
             </li>

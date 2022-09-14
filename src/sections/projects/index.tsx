@@ -8,7 +8,7 @@ const Projects = () => {
     <section id="projects" className="projects">
       <Col className="center-text">
         <h2>projects</h2>
-        <p>Here are some of my recent projects!</p>
+        <p>Here are some of my recent projects.</p>
       </Col>
       <div className="grid">
         {projects.map((project, index) => (
