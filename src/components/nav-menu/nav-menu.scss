@@ -68,6 +68,9 @@
           @include focus;
         }
       }
+      @include break-point(mobile) {
+        padding: 20px 25px;
+      }
     }
   }
 
