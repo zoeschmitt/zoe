@@ -46,7 +46,7 @@ const NavMenu = (props: Props) => {
               <li key={index}>
                 <Link
                   className="link"
-                  to={route.href ? "#" : `/#${route}`}
+                  to={route.href ? "#" : `/#${route.name}`}
                   onClick={() => navLinkOnClick(route)}
                 >
                   {route.name}

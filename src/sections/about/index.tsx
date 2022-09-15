@@ -21,7 +21,7 @@ const About = () => {
               rel="noreferrer"
             >
               WCAG 2.1
-            </a>
+            </a>{" "}
             accessible. In the past I've worked as a UI/UX designer and
             developer.
           </p>
