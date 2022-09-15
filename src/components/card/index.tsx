@@ -1,33 +1,40 @@
 import Project from "../../types/project";
 import Chip from "../chip";
 import Row from "../row";
+import classnames from "classnames";
 import "./card.scss";
+
+const CSS_PREFIX = "project-image";
 
 const Card = (project: Project) => {
   return (
-    <div className="card">
+    <button className="card">
       <img
-        className="project-image"
+        className={classnames(CSS_PREFIX, {
+          [`${CSS_PREFIX}--small`]: Boolean(project.small),
+        })}
         src={`assets/${project.image}`}
         alt={project.alt}
       />
-      <div className="details">
+      <div className="details" aria-hidden="true">
         <div className="content">
           <Row>
             <h3>{project.name}</h3>
-            <div className="source-code-link">
-              <a
-                href={project.source}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Github"
-              >
-                <img
-                  src="assets/github_black.svg"
-                  alt={`Source code link for ${project.name}`}
-                />
-              </a>
-            </div>
+            {project.source && (
+              <div className="source-code-link">
+                <a
+                  href={project.source}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Github"
+                >
+                  <img
+                    src="assets/github_black.svg"
+                    alt={`Source code link for ${project.name}`}
+                  />
+                </a>
+              </div>
+            )}
           </Row>
           <div className="chips">
             {project.categories.map((chip, index) => (
@@ -36,7 +43,7 @@ const Card = (project: Project) => {
           </div>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 

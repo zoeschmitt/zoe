@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  
+
   &--show {
     position: fixed;
     display: flex;
@@ -97,6 +97,9 @@
         }
         &:focus {
           @include focus;
+        }
+        @include break-point(mobile) {
+          font-size: 2rem;
         }
       }
     }

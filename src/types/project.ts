@@ -4,7 +4,8 @@ type Project = {
     categories: string[];
     image: string;
     alt: string;
-    source: string;
+    source?: string;
+    small?: boolean;
 }
 
 export default Project;
