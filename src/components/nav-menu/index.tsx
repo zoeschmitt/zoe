@@ -2,6 +2,7 @@ import classnames from "classnames";
 import { Link } from "react-router-dom";
 import routes from "../../data/routes";
 import Route from "../../types/route";
+import Logo from "../logo";
 import Row from "../row";
 import "./nav-menu.scss";
 
@@ -29,9 +30,7 @@ const NavMenu = (props: Props) => {
     >
       <Row className="header-row">
         <div className="top-header">
-          <a className="logo" aria-label="scroll to top" href="/">
-            <img src="assets/zs_white.svg" alt=""></img>
-          </a>
+          <Logo light={true} />
           <button className="menu" aria-label="open menu" onClick={toggle}>
             <div className="line-top"></div>
             <div className="line-mid"></div>

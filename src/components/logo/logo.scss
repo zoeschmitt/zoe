@@ -1,0 +1,17 @@
+@import "../../styles/global.scss";
+
+.logo {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  border-radius: 9px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    @include focus;
+  }
+}

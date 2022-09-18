@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import "./nav.scss";
 import routes from "../../data/routes";
 import NavMenu from "../../components/nav-menu";
+import Logo from "../../components/logo";
 
 const CSS_PREFIX = "nav";
 
@@ -41,9 +42,7 @@ const Nav = () => {
       aria-label="Main Navigation"
     >
       <div className="container">
-        <a className="logo" aria-label="scroll to top" href="/">
-          <img src="assets/zs.svg" alt=""></img>
-        </a>
+        <Logo />
         <ul className="nav-links">
           {routes.map((route, index) => (
             <li
