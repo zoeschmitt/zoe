@@ -8,7 +8,7 @@ const Chip = (props: Props) => {
   const { text } = props;
 
   return (
-    <div className="chip" aria-label={text}>
+    <div className="chip">
       {text}
     </div>
   );
