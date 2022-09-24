@@ -3,23 +3,29 @@ import Chip from "../chip";
 import Row from "../row";
 import classnames from "classnames";
 import "./card.scss";
+import Col from "../col";
 
 const CSS_PREFIX = "project-image";
 
 const Card = (project: Project) => {
   return (
-    <button className="card">
-      <img
-        className={classnames(CSS_PREFIX, {
-          [`${CSS_PREFIX}--small`]: Boolean(project.small),
-        })}
-        src={`assets/${project.image}`}
-        alt={project.alt}
-      />
-      <div className="details" aria-hidden="true">
+    <div className="card">
+      <div className="img-wrapper">
+        <img
+          className={classnames(CSS_PREFIX, {
+            [`${CSS_PREFIX}--small`]: Boolean(project.small),
+          })}
+          src={`assets/${project.image}`}
+          alt={project.alt}
+        />
+      </div>
+      <div className="details">
         <div className="content">
           <Row>
-            <h3>{project.name}</h3>
+            <Col>
+              <h3>{project.name}</h3>
+              <p className="desc">{project.description}</p>
+            </Col>
             {project.source && (
               <div className="source-code-link">
                 <a
@@ -43,7 +49,7 @@ const Card = (project: Project) => {
           </div>
         </div>
       </div>
-    </button>
+    </div>
   );
 };
 

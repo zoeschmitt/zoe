@@ -12,35 +12,57 @@ $card-width: 400px;
   height: $card-height;
   background-color: $color-light-grey;
   border-radius: 28px;
-  overflow: hidden;
   border: none;
-  cursor: pointer;
   &:hover {
     transform: scale(1.05);
-    .project-image {
-      @include lift-animation(-5rem);
+    .img-wrapper {
+      .project-image {
+        @include lift-animation(-5rem);
+        &--small {
+          @include lift-animation(-1rem);
+        }
+      }
+    }
+    .details {
+      @include lift-animation(8rem);
+      // background: $color-white;
+      background: rgba(255, 255, 255, 0.9);
+      .content {
+        .col {
+          .desc {
+            max-height: 500px;
+            opacity: 1;
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
   &:focus {
     outline: 1px dashed $color-black;
     outline-offset: 5px;
   }
-  .project-image {
-    position: absolute;
-    object-fit: cover;
-    width: $card-width - 150px;
-    margin-top: 300px;
-    @include lift-animation;
-    &--small {
-      width: $card-width - 100px;
+  .img-wrapper {
+    overflow: hidden;
+    height: $card-height;
+    .project-image {
+      object-fit: cover;
+      width: $card-width - 150px;
       margin-top: 100px;
+      @include lift-animation;
+      &--small {
+        width: $card-width - 100px;
+      }
     }
   }
+
   .details {
+    @include lift-animation;
     width: $card-width - 20px;
     position: absolute;
     align-self: flex-end;
     margin-bottom: 10px;
+    // transition: background 500ms ease-in-out;
 
     background: rgba(255, 255, 255, 0.3);
     border-radius: 22px;
@@ -53,6 +75,17 @@ $card-width: 400px;
       color: $color-black;
       padding: 15px;
       font-family: "Open Sans", sans-serif;
+      .col {
+        text-align: left;
+        .desc {
+          font-size: 14px;
+          color: $color-black;
+          line-height: normal;
+          max-height: 0;
+          opacity: 0;
+          margin: 0;
+        }
+      }
       .row {
         justify-content: space-between;
         h3 {
@@ -92,9 +125,11 @@ $card-width: 400px;
   @include break-point(mobile) {
     width: 300px;
     height: 350px;
-    .project-image {
-      width: 200px;
-      margin-top: 100px;
+    .img-wrapper {
+      .project-image {
+        width: 200px;
+        margin-top: 100px;
+      }
     }
     .details {
       width: 280px;
