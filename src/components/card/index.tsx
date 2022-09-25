@@ -44,7 +44,7 @@ const Card = (project: Project) => {
           </Row>
           <div className="chips">
             {project.categories.map((chip, index) => (
-              <Chip key={index} text={chip} />
+              <Chip key={index}>{chip}</Chip>
             ))}
           </div>
         </div>

@@ -1,15 +1,14 @@
 import "./chip.scss";
 
 type Props = {
-  text: string;
-};
+  children: React.ReactNode;
+}
 
 const Chip = (props: Props) => {
-  const { text } = props;
-
+  const { children } = props;
   return (
     <div className="chip">
-      {text}
+      {children}
     </div>
   );
 };
