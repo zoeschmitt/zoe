@@ -26,7 +26,7 @@ const About = () => {
             developer.
           </p>
           <p>
-            I enjoy working on challenging projects and finding creative ways to
+            I enjoy working on challenging problems and finding creative ways to
             solve them with design and code. I focus on simplicity,
             accessibility, and human-centered approaches to both development and
             design.
