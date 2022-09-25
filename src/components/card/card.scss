@@ -119,9 +119,9 @@ $card-width: 400px;
   }
   @include break-point(mobile) {
     width: 300px;
-    height: 400px;
+    height: 500px;
     .img-wrapper {
-      height: 400px;
+      height: 500px;
       .project-image {
         width: 200px;
         margin-top: 50px;
@@ -135,9 +135,6 @@ $card-width: 400px;
             margin: 0 20px 10px 0;
           }
         }
-        .chips {
-          margin-top: 20px;
-        }
       }
     }
     &:hover {
@@ -145,7 +142,7 @@ $card-width: 400px;
         @include lift-animation(-0.5rem);
       }
       .details .content .col .desc {
-        margin-bottom: 0;
+        margin-bottom: 20px;
       }
     }
   }

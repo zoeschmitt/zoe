@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     name: "TrailerHub",
     description: [
-      "A multi-platform trailer sharing mobile app that was deployed on the AppStore & Google Playstore. It gained over 400 users and earned a small profit.",
+      "A multi-platform trailer sharing mobile app that was deployed on the AppStore & Google Playstore.",
     ],
     categories: ["Flutter", "JavaScript", "Firebase", "React", "Android", "iOS"],
     image: "trailerhub.png",
