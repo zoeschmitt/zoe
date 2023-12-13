@@ -10,7 +10,19 @@
 .app {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 60px;
+  gap: 80px;
+
+  .intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-links {
+      display: flex;
+      height: min-content;
+      gap: 15px;
+      white-space: nowrap;
+    }
+  }
 
   .logo {
     height: 100px;
@@ -26,6 +38,11 @@
 
   a:hover {
     color: #535bf2;
+  }
+
+  hr {
+    border-top: none;
+    border-left: none;
   }
 
   h1 {
@@ -99,6 +116,42 @@
     }
   }
 
+  .footer {
+    margin: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &-links {
+      display: flex;
+      gap: 20px;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        width: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .footer {
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 30px;
+
+      &-links {
+        justify-content: center;
+        white-space: nowrap;
+      }
+    }
+  }
+
   @media (max-width: 550px) {
     .work-experience {
       display: grid;
@@ -115,6 +168,13 @@
 
     .projects {
       grid-template-columns: 1fr;
+    }
+
+    .intro {
+      display: unset;
+      &-links {
+        margin-top: 6px;
+      }
     }
   }
 }

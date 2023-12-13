@@ -23,6 +23,7 @@ export type Data = {
   role: string
   description: string
   secondaryDescription: string
+  email: string;
   github: string
   linkedin: string
   resume: string
