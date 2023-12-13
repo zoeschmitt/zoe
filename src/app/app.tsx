@@ -1,6 +1,5 @@
 import jsonData from '../assets/data.json'
 import externalLink from '../assets/external-link.svg'
-import profilePicture from '../assets/headshot.jpeg'
 import { Data } from '../types/data'
 import './app.scss'
 
@@ -29,7 +28,7 @@ function App() {
       <div>
         <div>
           <div>
-            <img src={profilePicture} className='logo' alt='Profile picture' />
+            <img src='./headshot.jpeg' className='logo' alt='Profile picture' />
             <h1 className='text-title'>{data.name}</h1>
             <div className='intro'>
               <p className='text-body text-body--light'>{data.role}</p>{' '}
@@ -81,9 +80,11 @@ function App() {
         <div className='projects'>
           {data.projects.map(project => (
             <div key={project.name} className='project'>
-              <div className='image'></div>
               <div className='project-details'>
-                <p className='text-body text-body--small'>{project.name}</p>
+                <a className='text-body text-body--small' href={project.url}>
+                  {project.name} <img aria-hidden='true' src={externalLink} />
+                </a>
+                <p className='text-body text-body--small'>{project.stack.join(', ')}</p>
                 <p className='text-body text-body--small text-gray'>{project.description}</p>
               </div>
             </div>
