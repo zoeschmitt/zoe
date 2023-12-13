@@ -3,6 +3,7 @@
   "role": "Full Stack Software Developer",
   "description": "Lorem ipsum dolor sit amet consectetur. Justo amet quisque dignissim dolor leo viverra imperdiet proin. Arcu sagittis hendrerit bibendum hendrerit ornare tempus suspendisse a feugiat. ",
   "secondaryDescription": "Rhoncus eros amet diam elementum orci egestas eget iaculis. Vel at amet dui feugiat justo.",
+  "email": "",
   "github": "https://github.com/<username>",
   "linkedin": "https://www.linkedin.com/in/<username>",
   "resume": "",
@@ -30,25 +31,25 @@
   "projects": [
     {
       "name": "Name",
-      "image": "",
+      "stack": ["TypeScript", "React", "Vite", "AWS"],
       "description": "Lorem ipsum dolor sit amet consectetur.",
       "url": ""
     },
     {
       "name": "Name",
-      "image": "",
+      "stack": ["TypeScript", "React", "Vite", "AWS"],
       "description": "Lorem ipsum dolor sit amet consectetur.",
       "url": ""
     },
     {
       "name": "Name",
-      "image": "",
+      "stack": ["TypeScript", "React", "Vite", "AWS"],
       "description": "Lorem ipsum dolor sit amet consectetur.",
       "url": ""
     },
     {
       "name": "Name",
-      "image": "",
+      "stack": ["TypeScript", "React", "Vite", "AWS"],
       "description": "Lorem ipsum dolor sit amet consectetur.",
       "url": ""
     }
