@@ -1,8 +1,10 @@
 export type WorkExperience = {
   time: string
   role: string
+  company: string
   location: string
   description: string[]
+  accentColor?: string
 }
 
 export type Project = {
@@ -23,7 +25,7 @@ export type Data = {
   role: string
   description: string
   secondaryDescription: string
-  email: string;
+  email: string
   github: string
   linkedin: string
   resume: string

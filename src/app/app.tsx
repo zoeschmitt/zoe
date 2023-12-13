@@ -62,7 +62,9 @@ function App() {
               <p>{exp.time}</p>
             </div>
             <div className='work-experience-description'>
-              <h3 className='text-subtitle'>{exp.role}</h3>
+              <h3 className='text-subtitle'>
+                {exp.role} at <span style={{ color: exp.accentColor }}>{exp.company}</span>
+              </h3>
               <p className='work-experience-description-location text-gray'>{exp.location}</p>
               <ul>
                 {exp.description.map(desc => (
