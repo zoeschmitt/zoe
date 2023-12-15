@@ -1,9 +1,7 @@
 import jsonData from '../assets/data.json'
-import externalLink from '../assets/external-link.svg'
+import ExternalLink from '../components/external-link'
 import { Data } from '../types/data'
 import './app.scss'
-
-/// TODO: project images, dark mode, footer, contacts
 
 function App() {
   const data: Data = jsonData
@@ -34,15 +32,7 @@ function App() {
               <p className='text-body text-body--light'>{data.role}</p>{' '}
               <div className='intro-links'>
                 {links.map(link => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className='text-body--small'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    {link.label} <span className='visually-hidden'>(opens in a new tab)</span>
-                    <img aria-hidden='true' src={externalLink} />
-                  </a>
+                  <ExternalLink key={link.label} href={link.href} label={link.label} />
                 ))}
               </div>
             </div>
@@ -63,7 +53,7 @@ function App() {
             </div>
             <div className='work-experience-description'>
               <h3 className='text-subtitle'>
-                {exp.role} at <span style={{ color: exp.accentColor }}>{exp.company}</span>
+                {exp.role} at {exp.url ? <a href={exp.url}>{exp.company}</a> : exp.company}
               </h3>
               <p className='work-experience-description-location text-gray'>{exp.location}</p>
               <ul>
@@ -83,9 +73,7 @@ function App() {
           {data.projects.map(project => (
             <div key={project.name} className='project'>
               <div className='project-details'>
-                <a className='text-body text-body--small' href={project.url}>
-                  {project.name} <img aria-hidden='true' src={externalLink} />
-                </a>
+                <ExternalLink href={project.url} label={project.name} />
                 <p className='text-body text-body--small'>{project.stack.join(', ')}</p>
                 <p className='text-body text-body--small text-gray'>{project.description}</p>
               </div>
@@ -111,15 +99,7 @@ function App() {
           </div>
           <div className='footer-links'>
             {links.map(link => (
-              <a
-                key={link.label}
-                href={link.href}
-                className='text-body--small'
-                target='_blank'
-                rel='noopener noreferrer'>
-                {link.label} <span className='visually-hidden'>(opens in a new tab)</span>
-                <img aria-hidden='true' src={externalLink} />
-              </a>
+              <ExternalLink key={link.label} href={link.href} label={link.label} />
             ))}
           </div>
         </div>
