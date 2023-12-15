@@ -32,7 +32,12 @@ function App() {
               <p className='text-body text-body--light'>{data.role}</p>{' '}
               <div className='intro-links'>
                 {links.map(link => (
-                  <ExternalLink key={link.label} href={link.href} label={link.label} />
+                  <ExternalLink
+                    key={link.label}
+                    href={link.href}
+                    label={link.label}
+                    className='text-body--small'
+                  />
                 ))}
               </div>
             </div>
@@ -53,7 +58,8 @@ function App() {
             </div>
             <div className='work-experience-description'>
               <h3 className='text-subtitle'>
-                {exp.role} at {exp.url ? <a href={exp.url}>{exp.company}</a> : exp.company}
+                {exp.role} at{' '}
+                {exp.url ? <ExternalLink href={exp.url} label={exp.company} /> : exp.company}
               </h3>
               <p className='work-experience-description-location text-gray'>{exp.location}</p>
               <ul>
@@ -99,7 +105,12 @@ function App() {
           </div>
           <div className='footer-links'>
             {links.map(link => (
-              <ExternalLink key={link.label} href={link.href} label={link.label} />
+              <ExternalLink
+                key={link.label}
+                href={link.href}
+                label={link.label}
+                className='text-body--small'
+              />
             ))}
           </div>
         </div>
