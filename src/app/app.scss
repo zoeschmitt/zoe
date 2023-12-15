@@ -1,8 +1,8 @@
 @import '../colors.scss';
 
 #root {
-  max-width: 600px;
-  width: 600px;
+  max-width: 650px;
+  width: 650px;
   margin: 0 auto;
   text-align: start;
 }
@@ -10,7 +10,7 @@
 .app {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 80px;
+  gap: 60px;
 
   .intro {
     display: flex;
@@ -129,7 +129,7 @@
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     .footer {
       display: grid;
       grid-template-columns: 1fr;
