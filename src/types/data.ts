@@ -4,7 +4,7 @@ export type WorkExperience = {
   company: string
   location: string
   description: string[]
-  accentColor?: string
+  url?: string
 }
 
 export type Project = {

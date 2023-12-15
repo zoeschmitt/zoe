@@ -1,9 +1,7 @@
 import jsonData from '../assets/data.json'
-import externalLink from '../assets/external-link.svg'
+import ExternalLink from '../components/external-link'
 import { Data } from '../types/data'
 import './app.scss'
-
-/// TODO: project images, dark mode, footer, contacts
 
 function App() {
   const data: Data = jsonData
@@ -25,50 +23,43 @@ function App() {
 
   return (
     <div className='app'>
-      <div>
+      <section>
         <div>
           <div>
-            <img src='./headshot.jpeg' className='logo' alt='Profile picture' />
-            <h1 className='text-title'>{data.name}</h1>
+            <img src='./headshot.jpeg' className='logo mb-20' alt='Profile picture' />
+            <h1 className='text-title mv-4'>{data.name}</h1>
             <div className='intro'>
-              <p className='text-body text-body--light'>{data.role}</p>{' '}
+              <p className='text-body text-body--light m-0'>{data.role}</p>{' '}
               <div className='intro-links'>
                 {links.map(link => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className='text-body--small'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    {link.label} <span className='visually-hidden'>(opens in a new tab)</span>
-                    <img aria-hidden='true' src={externalLink} />
-                  </a>
+                  <ExternalLink key={link.label} className='text-body--small' {...link} />
                 ))}
               </div>
             </div>
           </div>
         </div>
-        <div className='description'>
+        <div className='mt-40'>
           <p className='text-body'>{data.description}</p>
           <br />
           <p>{data.secondaryDescription}</p>
         </div>
-      </div>
-      <div>
-        <h2 className='text-title text-title--small'>Work Experience</h2>
+      </section>
+      <section>
+        <h2 className='text-title text-title--small mb-30'>Work Experience</h2>
         {data.workExperience.map(exp => (
-          <div key={exp.role} className='work-experience'>
-            <div className='work-experience-period'>
-              <p>{exp.time}</p>
+          <div key={exp.role} className='work-experience mb-30'>
+            <div className='work-experience-period mr-40'>
+              <p className='m-0'>{exp.time}</p>
             </div>
             <div className='work-experience-description'>
-              <h3 className='text-subtitle'>
-                {exp.role} at <span style={{ color: exp.accentColor }}>{exp.company}</span>
+              <h3 className='text-subtitle mv-1'>
+                {exp.role} at{' '}
+                {exp.url ? <ExternalLink href={exp.url} label={exp.company} /> : exp.company}
               </h3>
-              <p className='work-experience-description-location text-gray'>{exp.location}</p>
+              <p className='mt-4 text-gray'>{exp.location}</p>
               <ul>
                 {exp.description.map(desc => (
-                  <li key={desc}>
+                  <li key={desc} className='mb-10'>
                     <p className='text-body text-body--light'>{desc}</p>
                   </li>
                 ))}
@@ -76,34 +67,32 @@ function App() {
             </div>
           </div>
         ))}
-      </div>
-      <div>
-        <h2 className='text-title text-title--small'>Projects</h2>
+      </section>
+      <section>
+        <h2 className='text-title text-title--small mb-30'>Projects</h2>
         <div className='projects'>
           {data.projects.map(project => (
             <div key={project.name} className='project'>
               <div className='project-details'>
-                <a className='text-body text-body--small' href={project.url}>
-                  {project.name} <img aria-hidden='true' src={externalLink} />
-                </a>
-                <p className='text-body text-body--small'>{project.stack.join(', ')}</p>
-                <p className='text-body text-body--small text-gray'>{project.description}</p>
+                <ExternalLink className='m-0' href={project.url} label={project.name} />
+                <p className='text-body text-body--small m-0'>{project.stack.join(', ')}</p>
+                <p className='text-body text-body--small text-gray m-0'>{project.description}</p>
               </div>
             </div>
           ))}
         </div>
-      </div>
-      <div>
-        <h2 className='text-title text-title--small'>Testimonials</h2>
+      </section>
+      <section>
+        <h2 className='text-title text-title--small mb-30'>Testimonials</h2>
         {data.testimonials.map(test => (
-          <div key={test.name} className='testimonial'>
-            <p className='text-body text-body--light'>“ {test.quote} ”</p>
-            <p className='text-body text-body--small'>{test.name}</p>
-            <p className='text-body text-body--small text-gray'>{test.role}</p>
+          <div key={test.name} className='mb-30'>
+            <p className='text-body text-body--light mb-10'>“ {test.quote} ”</p>
+            <p className='text-body text-body--small m-0'>{test.name}</p>
+            <p className='text-body text-body--small text-gray m-0'>{test.role}</p>
           </div>
         ))}
-      </div>
-      <div>
+      </section>
+      <footer>
         <hr />
         <div className='footer'>
           <div>
@@ -111,19 +100,11 @@ function App() {
           </div>
           <div className='footer-links'>
             {links.map(link => (
-              <a
-                key={link.label}
-                href={link.href}
-                className='text-body--small'
-                target='_blank'
-                rel='noopener noreferrer'>
-                {link.label} <span className='visually-hidden'>(opens in a new tab)</span>
-                <img aria-hidden='true' src={externalLink} />
-              </a>
+              <ExternalLink key={link.label} className='text-body--small' {...link} />
             ))}
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
