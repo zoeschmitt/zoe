@@ -26,45 +26,40 @@ function App() {
       <div>
         <div>
           <div>
-            <img src='./headshot.jpeg' className='logo' alt='Profile picture' />
-            <h1 className='text-title'>{data.name}</h1>
+            <img src='./headshot.jpeg' className='logo mb-20' alt='Profile picture' />
+            <h1 className='text-title mv-4'>{data.name}</h1>
             <div className='intro'>
-              <p className='text-body text-body--light'>{data.role}</p>{' '}
+              <p className='text-body text-body--light m-0'>{data.role}</p>{' '}
               <div className='intro-links'>
                 {links.map(link => (
-                  <ExternalLink
-                    key={link.label}
-                    href={link.href}
-                    label={link.label}
-                    className='text-body--small'
-                  />
+                  <ExternalLink key={link.label} className='text-body--small' {...link} />
                 ))}
               </div>
             </div>
           </div>
         </div>
-        <div className='description'>
+        <div className='mt-40'>
           <p className='text-body'>{data.description}</p>
           <br />
           <p>{data.secondaryDescription}</p>
         </div>
       </div>
       <div>
-        <h2 className='text-title text-title--small'>Work Experience</h2>
+        <h2 className='text-title text-title--small mb-30'>Work Experience</h2>
         {data.workExperience.map(exp => (
-          <div key={exp.role} className='work-experience'>
-            <div className='work-experience-period'>
-              <p>{exp.time}</p>
+          <div key={exp.role} className='work-experience mb-30'>
+            <div className='work-experience-period mr-40'>
+              <p className='m-0'>{exp.time}</p>
             </div>
             <div className='work-experience-description'>
-              <h3 className='text-subtitle'>
+              <h3 className='text-subtitle mv-1'>
                 {exp.role} at{' '}
                 {exp.url ? <ExternalLink href={exp.url} label={exp.company} /> : exp.company}
               </h3>
-              <p className='work-experience-description-location text-gray'>{exp.location}</p>
+              <p className='mt-4 text-gray'>{exp.location}</p>
               <ul>
                 {exp.description.map(desc => (
-                  <li key={desc}>
+                  <li key={desc} className='mb-10'>
                     <p className='text-body text-body--light'>{desc}</p>
                   </li>
                 ))}
@@ -74,26 +69,26 @@ function App() {
         ))}
       </div>
       <div>
-        <h2 className='text-title text-title--small'>Projects</h2>
+        <h2 className='text-title text-title--small mb-30'>Projects</h2>
         <div className='projects'>
           {data.projects.map(project => (
             <div key={project.name} className='project'>
               <div className='project-details'>
-                <ExternalLink href={project.url} label={project.name} />
-                <p className='text-body text-body--small'>{project.stack.join(', ')}</p>
-                <p className='text-body text-body--small text-gray'>{project.description}</p>
+                <ExternalLink className='m-0' href={project.url} label={project.name} />
+                <p className='text-body text-body--small m-0'>{project.stack.join(', ')}</p>
+                <p className='text-body text-body--small text-gray m-0'>{project.description}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
       <div>
-        <h2 className='text-title text-title--small'>Testimonials</h2>
+        <h2 className='text-title text-title--small mb-30'>Testimonials</h2>
         {data.testimonials.map(test => (
-          <div key={test.name} className='testimonial'>
-            <p className='text-body text-body--light'>“ {test.quote} ”</p>
-            <p className='text-body text-body--small'>{test.name}</p>
-            <p className='text-body text-body--small text-gray'>{test.role}</p>
+          <div key={test.name} className='mb-30'>
+            <p className='text-body text-body--light mb-10'>“ {test.quote} ”</p>
+            <p className='text-body text-body--small m-0'>{test.name}</p>
+            <p className='text-body text-body--small text-gray m-0'>{test.role}</p>
           </div>
         ))}
       </div>
@@ -105,12 +100,7 @@ function App() {
           </div>
           <div className='footer-links'>
             {links.map(link => (
-              <ExternalLink
-                key={link.label}
-                href={link.href}
-                label={link.label}
-                className='text-body--small'
-              />
+              <ExternalLink key={link.label} className='text-body--small' {...link} />
             ))}
           </div>
         </div>

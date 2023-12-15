@@ -27,7 +27,6 @@
   .logo {
     height: 100px;
     border-radius: 18px;
-    margin-bottom: 17px;
   }
 
   a {
@@ -52,43 +51,16 @@
     border-left: none;
   }
 
-  h1 {
-    margin: 3px 0;
-  }
-
-  h2 {
-    margin: 0 0 30px 0;
-  }
-
-  p {
-    margin: 1px 0;
-  }
-
-  .description {
-    margin-top: 40px;
-  }
-
   .work-experience {
     display: flex;
-    margin-bottom: 30px;
     &:last-of-type {
       margin-bottom: 0;
     }
     &-period {
       flex: 1;
-      margin-right: 40px;
     }
     &-description {
       flex: 4;
-      &-location {
-        margin-top: 4px;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-    }
-    h3 {
-      margin: 1px 0;
     }
   }
 
@@ -99,18 +71,6 @@
     column-gap: 10px;
     .project {
       display: flex;
-    }
-  }
-
-  .testimonial {
-    margin-bottom: 30px;
-
-    p {
-      margin: 0;
-    }
-
-    p:first-of-type {
-      margin-bottom: 10px;
     }
   }
 
@@ -159,7 +119,7 @@
         margin: 0 0 1px 0;
         p {
           font-size: 14px;
-          color: $color-text-light;
+          color: var(--tertiary);
         }
       }
     }
