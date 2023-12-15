@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className='app'>
-      <div>
+      <section>
         <div>
           <div>
             <img src='./headshot.jpeg' className='logo mb-20' alt='Profile picture' />
@@ -43,8 +43,8 @@ function App() {
           <br />
           <p>{data.secondaryDescription}</p>
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <h2 className='text-title text-title--small mb-30'>Work Experience</h2>
         {data.workExperience.map(exp => (
           <div key={exp.role} className='work-experience mb-30'>
@@ -67,8 +67,8 @@ function App() {
             </div>
           </div>
         ))}
-      </div>
-      <div>
+      </section>
+      <section>
         <h2 className='text-title text-title--small mb-30'>Projects</h2>
         <div className='projects'>
           {data.projects.map(project => (
@@ -81,8 +81,8 @@ function App() {
             </div>
           ))}
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <h2 className='text-title text-title--small mb-30'>Testimonials</h2>
         {data.testimonials.map(test => (
           <div key={test.name} className='mb-30'>
@@ -91,8 +91,8 @@ function App() {
             <p className='text-body text-body--small text-gray m-0'>{test.role}</p>
           </div>
         ))}
-      </div>
-      <div>
+      </section>
+      <footer>
         <hr />
         <div className='footer'>
           <div>
@@ -104,7 +104,7 @@ function App() {
             ))}
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
