@@ -6,6 +6,8 @@
   --primary: #{$color-royal-blue};
   --secondary: #{$color-persian-blue};
   --tertiary: #{$color-gray};
+  --card-background: #{$color-card-light-gray};
+  --card-border: #{$color-card-border-light-gray};
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -125,5 +127,7 @@ body {
     --primary: #{$color-malibu};
     --secondary: #{$color-anakiwa};
     --tertiary: #{$color-light-gray};
+    --card-background: #{$color-card-dark-gray};
+    --card-border: #{$color-card-border-dark-gray};
   }
 }
