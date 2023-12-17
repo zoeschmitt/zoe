@@ -7,11 +7,18 @@ export type WorkExperience = {
   url?: string
 }
 
+export type ProjectImage = {
+  src: string
+  offset: boolean
+  alt: string
+}
+
 export type Project = {
   name: string
   description: string
   url: string
   stack: string[]
+  img: ProjectImage
 }
 
 export type Testimonial = {

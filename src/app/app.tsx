@@ -73,11 +73,13 @@ function App() {
         <div className='projects'>
           {data.projects.map(project => (
             <div key={project.name} className='project'>
-              <div className='project-details'>
-                <ExternalLink className='m-0' href={project.url} label={project.name} />
-                <p className='text-body text-body--small m-0'>{project.stack.join(', ')}</p>
-                <p className='text-body text-body--small text-gray m-0'>{project.description}</p>
+              <div
+                className={`project-image mb-20 ${project.img.offset && `project-image--offset`}`}>
+                <img src={project.img.src} alt={project.img.alt} />
               </div>
+              <ExternalLink className='m-0' href={project.url} label={project.name} />
+              <p className='text-body text-body--small m-0'>{project.stack.join(', ')}</p>
+              <p className='text-body text-body--small text-gray m-0'>{project.description}</p>
             </div>
           ))}
         </div>
