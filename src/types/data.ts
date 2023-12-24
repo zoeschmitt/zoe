@@ -27,6 +27,11 @@ export type Testimonial = {
   role: string
 }
 
+export type TechStack = {
+  src: string
+  alt: string
+}
+
 export type Data = {
   name: string
   role: string
@@ -39,4 +44,5 @@ export type Data = {
   workExperience: WorkExperience[]
   projects: Project[]
   testimonials: Testimonial[]
+  techStack: TechStack[]
 }

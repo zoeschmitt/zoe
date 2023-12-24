@@ -45,6 +45,14 @@ function App() {
         </div>
       </section>
       <section>
+        <h2 className='text-title text-title--small mb-30'>Tech Stack</h2>
+        <div className='logos'>
+          {data.techStack.map(tech => (
+            <img key={tech.alt} {...tech} />
+          ))}
+        </div>
+      </section>
+      <section>
         <h2 className='text-title text-title--small mb-30'>Work Experience</h2>
         {data.workExperience.map(exp => (
           <div key={exp.role} className='work-experience mb-30'>
