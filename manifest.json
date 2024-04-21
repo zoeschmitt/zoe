@@ -1,5 +1,4 @@
 {
-  "background_color": "#ffffff",
   "dir": "ltr",
   "display": "standalone",
   "name": "Zoe's Website",
@@ -7,7 +6,6 @@
   "scope": "/",
   "short_name": "Zoe",
   "start_url": "/",
-  "theme_color": "#ffffff",
   "id": "zoeschmitt-website",
   "description": "Zoe Schmitt's Website",
   "lang": "en",
