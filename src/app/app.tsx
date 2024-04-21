@@ -1,7 +1,17 @@
+import { useEffect } from 'react'
 import jsonData from '../assets/data.json'
 import ExternalLink from '../components/external-link'
 import { Data } from '../types/data'
 import './app.scss'
+
+function updateManifestThemeColor() {
+  const colorSchemeIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
+  if (colorSchemeIsDark) {
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', '#242424')
+    document.querySelector('meta[name="background-color"]')?.setAttribute('content', '#242424')
+  }
+}
 
 function App() {
   const data: Data = jsonData
@@ -20,6 +30,13 @@ function App() {
       href: data.github,
     },
   ]
+
+  useEffect(() => {
+    console.log('App mounted')
+    updateManifestThemeColor()
+  }, [])
+
+  console.log('App mounted')
 
   return (
     <div className='app'>
@@ -41,7 +58,7 @@ function App() {
         <div className='mt-40'>
           <p className='text-body'>{data.description}</p>
           <br />
-          <p>{data.secondaryDescription}</p>
+          <p className='text-body'>{data.secondaryDescription}</p>
         </div>
       </section>
       <section>

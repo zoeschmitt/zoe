@@ -1,4 +1,5 @@
 // This is the "Offline copy of pages" service worker
+self.__WB_DISABLE_DEV_LOGS = true
 
 const CACHE = 'zoeschmitt-website-offline'
 
